@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet" href = "killTheGnome.css" />
+    <title>Kill The Gnome!</title>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src = "./assets/music&sounds/Hyperfun.mp3"/>
+        Sorry, your browser does not support audio. Switch to another to hear the sounds!
+    </audio>
+    <audio id = "bootAudio">
+        <source src = "assets/music&sounds/66951__benboncan__boxing-bell.wav">
+    </audio>
+
+    <span id = "gnomeDiv"><img id = "gnome" src = "./assets/images&sprites/gnome.png" alt = "Gnome goes here, your internet broke"></span>
+    <span id = deadGnome onClick = "resGnome()" style = "display: none"><img src = "./assets/images&sprites/gnomeDown.png" alt = "dead gnome goes here, your internet broke!"></span>
+
+    <span id = "bootDiv" onClick = "translateBoot()"><img id = "boot" src = "./assets/images&sprites/boot.png" alt = "Boot goes here, your internet broke!"></span>
+    
+    <script type = "text/JavaScript" src = "./killTheGnome.js"></script>
+</body>
+</html>

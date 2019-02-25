@@ -1,0 +1,32 @@
+html{
+    background-image: url("./assets/images&sprites/WoWScrnShot_090514_211628.gif");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#gnomeDiv{
+    position: relative;
+    left: 65em;
+    top: 32em;
+}
+#gnomeDiv img{
+    background-size: cover;
+    height: 12em;
+    width: auto;
+    position: absolute;
+}
+
+#bootDiv{
+    position: relative;
+    left: 10em;
+    top: 42em;
+}
+
+#bootDiv img{
+    background-size: cover;
+    height: 4em;
+    width: auto;
+    position: absolute;
+}
