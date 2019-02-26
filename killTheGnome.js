@@ -177,11 +177,12 @@ function showHammerOfWrath(){
 }
 
 function translateHammerOfWrath(){
-    this.hammer.src = "./assets/images&sprites/Inv_hammer_04.png";
     let vertPos = 0;
-    let timer = setInterval(frame, 1);
+    
     if(this.gnomeDead == false){
+        this.hammer.src = "./assets/images&sprites/Inv_hammer_04.png";
         this.hammerOfWrathAudio.play();
+        var timer = setInterval(frame, 1);
     }
 
     function frame(){
