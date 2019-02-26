@@ -6,9 +6,13 @@ html{
     background-size: cover;
 }
 
+body{
+    background-size: cover;
+}
+
 #gnomeDiv{
     position: relative;
-    left: 66%;
+    left: 65%;
     top: 32em;
 }
 #gnomeDiv img{
@@ -52,5 +56,51 @@ html{
     background-size: cover;
     height: 12em;
     width: auto;
+    position: absolute;
+}
+
+
+#score {
+    max-width: 4em;
+    background-size: cover;
+    color: white;
+    background-color: black;
+}
+
+#critDiv{
+    position: relative;
+    left: 73%;
+    top: 30em;
+}
+
+#crit {
+    font-weight: bold;
+    background-size: cover;
+    height: 12em;
+    width: auto;
+    position: absolute;
+}
+
+#hammerOfWrathDiv{
+    position: relative;
+    left: 50%;
+    top: 48em;
+}
+
+#hammerOfWrath{
+    background-size: cover;
+    position: absolute;
+}
+
+#hammerDiv{
+    position: relative;
+    left: 72%;
+    top: -5em;
+}
+
+#hammer{
+    height: 1.25em;
+    width: auto;
+    background-size: cover;
     position: absolute;
 }

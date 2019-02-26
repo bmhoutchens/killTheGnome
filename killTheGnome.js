@@ -10,7 +10,13 @@ executionSentence = document.getElementById("executionSentence");
 exeSentenceAudio = document.getElementById("executionSentenceAudio");
 gnomeDeadSound = document.getElementById("gnomeDeadSound");
 executionSentenceDiv = document.getElementById("executionSentenceDiv");
+hammerOfWrath = document.getElementById("hammerOfWrath");
 resAudio = document.getElementById("resSound");
+scoreDisplay = document.getElementById("score");
+critDisplay = document.getElementById("critDiv");
+hammer = document.getElementById("hammer");
+hammerOfWrathAudio = document.getElementById("hammerOfWrathAudio");
+score = 0;
 function resGnome(){
     console.log("onclick works!");
 }
@@ -67,6 +73,18 @@ function translateBoot(){
     function frame(){
         if (this.bootKicked == false && this.gnomeDead == false){
             if(horzPos >= 856){
+                let abilityScore = Math.floor((Math.random() * 3) + 1)
+                if(abilityScore == 3){
+                    this.critDisplay.style.display = "block";
+                    setTimeout(() => {
+                        this.critDisplay.style.display = "none"
+                    }, 750)
+                }
+                this.score += abilityScore
+                if(this.score >= 10){
+                    showHammerOfWrath();
+                }
+                scoreDisplay.innerText = ("Score: " + this.score);
                 clearInterval(timer);
                 this.bell.play();
                 this.bootKicked = true;
@@ -110,6 +128,18 @@ function translateExecutionSentence(){
                 setTimeout(() => {
                     this.executionSentence.style.display = "none";
                   }, 1000)
+                let abilityScore = Math.floor((Math.random() * 4) + 1)
+                if(abilityScore == 4){
+                    this.critDisplay.style.display = "block";
+                    setTimeout(() => {
+                        this.critDisplay.style.display = "none"
+                    }, 750)
+                }
+                this.score += abilityScore
+                if(this.score >= 10){
+                    showHammerOfWrath();
+                }
+                scoreDisplay.innerText = ("Score: " + this.score); 
                 swapGnomeSprite();
             } else {
                 console.log("hitting this statement")
@@ -130,7 +160,7 @@ function swapGnomeSprite(){
     } else {
         this.gnome.style.display = "block";
         this.deadGnome.style.display = "none";
-
+        this.gnomeDead = false;
     }
 }
 
@@ -140,4 +170,44 @@ function resGnome(){
     setTimeout(() => {
         swapGnomeSprite();
     }, 2000)
+}
+
+function showHammerOfWrath(){
+    this.hammerOfWrath.src = "./assets/images&sprites/Spell_paladin_hammerofwrath.png";
+}
+
+function translateHammerOfWrath(){
+    this.hammer.src = "./assets/images&sprites/Inv_hammer_04.png";
+    let vertPos = 0;
+    let timer = setInterval(frame, 1);
+    if(this.gnomeDead == false){
+        this.hammerOfWrathAudio.play();
+    }
+
+    function frame(){
+        if(this.gnomeDead == false && this.gnomeKicked == false){
+            console.log(this.gnomeDead)
+            if(vertPos <= -650){
+                clearInterval(timer);
+                this.gnomeDeadSound.play();
+                this.gnomeDead = true;
+                this.hammer.src = "";
+                let abilityScore = Math.floor((Math.random() * 5) + 1)
+                if(abilityScore == 5){
+                    this.critDisplay.style.display = "block";
+                    setTimeout(() => {
+                        this.critDisplay.style.display = "none"
+                    }, 750)
+                }
+                this.score += abilityScore
+                scoreDisplay.innerText = ("Score: " + this.score); 
+                swapGnomeSprite();
+            } else {
+                vertPos -= 13;
+                this.hammer.style.bottom = vertPos + "px";
+            }
+        } else {
+            return
+        }
+    }
 }

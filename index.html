@@ -24,12 +24,21 @@
     <audio id = "resSound">
         <source src = "assets/music&sounds/FizzleHolyA.mp3">
     </audio>
+    <audio id = "hammerOfWrathAudio">
+        <source src = "./assets/music&sounds/HolyImpactDDLow.mp3">
+    </audio>
+
+    <span id = "scoreDiv"><p id = "score">Score: 0</p></span>
+    <span id = "critDiv" style = "display: none; color: yellow"><p id = "crit">Crit!</p></span>
     <span id = "gnomeDiv" onClick = "translateExecutionSentence()"><img id = "gnome" src = "./assets/images&sprites/gnome.png" alt = "Gnome goes here, your internet broke"></span>
     <span id = deadGnome onClick = "resGnome()" style = "display: none"><img src = "./assets/images&sprites/gnomeDown.png" alt = "dead gnome goes here, your internet broke!"></span>
 
     <span id = "bootDiv" onClick = "translateBoot()"><img id = "boot" src = "./assets/images&sprites/boot.png" alt = "Boot goes here, your internet broke!"></span>
     
-    <span id = "executionSentenceDiv" style = "display: none"><img id = "executionSentence" src = "./assets/images&sprites/Spell_paladin_executionsentence.png" alt = "Execution sentence goes here, your internet broke!"</span>
+    <span id = "executionSentenceDiv" style = "display: none"><img id = "executionSentence" src = "./assets/images&sprites/Spell_paladin_executionsentence.png" alt = "Execution sentence goes here, your internet broke!"></span>
+
+    <span id = "hammerDiv"><img id = "hammer"></span>
+    <span id = "hammerOfWrathDiv" onClick = "translateHammerOfWrath()"><img id = "hammerOfWrath"></span>
     <script type = "text/JavaScript" src = "./killTheGnome.js"></script>
 </body>
 </html>
