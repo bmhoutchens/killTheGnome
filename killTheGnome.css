@@ -8,7 +8,7 @@ html{
 
 #gnomeDiv{
     position: relative;
-    left: 65em;
+    left: 66%;
     top: 32em;
 }
 #gnomeDiv img{
@@ -27,6 +27,30 @@ html{
 #bootDiv img{
     background-size: cover;
     height: 4em;
+    width: auto;
+    position: absolute;
+}
+
+#executionSentenceDiv{
+    position: relative;
+    left: 68%;
+    top: 15em;
+}
+
+#executionSentence{
+    background-size: cover;
+    position: absolute;
+}
+
+#deadGnome{
+    position: relative;
+    left: 66%;
+    top: 32em;
+}
+
+#deadGnome img{
+    background-size: cover;
+    height: 12em;
     width: auto;
     position: absolute;
 }

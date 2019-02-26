@@ -15,12 +15,21 @@
     <audio id = "bootAudio">
         <source src = "assets/music&sounds/66951__benboncan__boxing-bell.wav">
     </audio>
-
-    <span id = "gnomeDiv"><img id = "gnome" src = "./assets/images&sprites/gnome.png" alt = "Gnome goes here, your internet broke"></span>
+    <audio id = "executionSentenceAudio">
+        <source src = "assets/music&sounds/HolyCast.mp3">
+    </audio>
+    <audio id = "gnomeDeadSound">
+        <source src ="assets/music&sounds/GnomeMaleMainWoundCrit.mp3">
+    </audio>
+    <audio id = "resSound">
+        <source src = "assets/music&sounds/FizzleHolyA.mp3">
+    </audio>
+    <span id = "gnomeDiv" onClick = "translateExecutionSentence()"><img id = "gnome" src = "./assets/images&sprites/gnome.png" alt = "Gnome goes here, your internet broke"></span>
     <span id = deadGnome onClick = "resGnome()" style = "display: none"><img src = "./assets/images&sprites/gnomeDown.png" alt = "dead gnome goes here, your internet broke!"></span>
 
     <span id = "bootDiv" onClick = "translateBoot()"><img id = "boot" src = "./assets/images&sprites/boot.png" alt = "Boot goes here, your internet broke!"></span>
     
+    <span id = "executionSentenceDiv" style = "display: none"><img id = "executionSentence" src = "./assets/images&sprites/Spell_paladin_executionsentence.png" alt = "Execution sentence goes here, your internet broke!"</span>
     <script type = "text/JavaScript" src = "./killTheGnome.js"></script>
 </body>
 </html>
