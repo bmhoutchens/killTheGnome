@@ -14,7 +14,7 @@ body{
 #gnomeDiv{
     position: relative;
     left: 65%;
-    top: 32em;
+    top: 28em;
 }
 #gnomeDiv img{
     background-size: cover;
@@ -26,7 +26,7 @@ body{
 #bootDiv{
     position: relative;
     left: 10em;
-    top: 42em;
+    top: 38em;
 }
 
 #bootDiv img{
@@ -71,7 +71,7 @@ body{
 #critDiv{
     position: relative;
     left: 73%;
-    top: 30em;
+    top: 26em;
 }
 
 #crit {
@@ -85,7 +85,7 @@ body{
 #hammerOfWrathDiv{
     position: relative;
     left: 50%;
-    top: 48em;
+    top: 44em;
 }
 
 #hammerOfWrath{
